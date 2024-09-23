@@ -214,12 +214,6 @@ try {
 		mask: '00.00.0000',
 	});
 
-	const signInPhone = document.querySelector('.sign-in__phone-input');
-
-	let phoneMask = new IMask(signInPhone, {
-		mask: '00 000-00-00',
-	});
-
 	// PassportSeries input change
 	passportSeries.addEventListener('input', e => {
 		e.target.value = e.target.value.toUpperCase().replace(/[^A-Z]/g, '');
@@ -267,51 +261,68 @@ try {
 		}
 	});
 
-	function checkAge(dateOfBirth) {
-		const now = new Date();
-		const dob = new Date(dateOfBirth);
-		const yearOfBirth = dob.getFullYear();
-
-		// Проверка корректности года рождения
-		if (yearOfBirth < 1900 || yearOfBirth > now.getFullYear()) {
-			return false;
-		}
-
-		let age = now.getFullYear() - yearOfBirth;
-		const monthDifference = now.getMonth() - dob.getMonth();
-		const dayDifference = now.getDate() - dob.getDate();
-
-		if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
-			age--;
-		}
-
-		return age >= 18;
-	}
-
 	birthdate.addEventListener('input', e => {
-		if (e.target.value.length == 10) {
-			const date = e.target.value.split('.');
-			const isAdult = checkAge(`${date[2]}-${date[1]}-${date[0]}`);
+		if (e.target.value.length === 10) {
+			const dateParts = e.target.value.split('.'); // Разбиваем строку по точкам
+			const day = parseInt(dateParts[0], 10);
+			const month = parseInt(dateParts[1], 10) - 1; // Месяцы в JavaScript начинаются с 0
+			const year = parseInt(dateParts[2], 10);
 
-			if (isAdult) {
-				birthdate.parentNode.parentNode.classList.remove('error');
-				// wizardData.birthDate = `${date[2]}-${date[1]}-${date[0]}`;
-			} else {
-				birthdate.parentNode.parentNode.classList.add('error');
+			const today = new Date();
+			const currentYear = today.getFullYear();
+
+			// Проверяем, что год находится в пределах 100 лет от текущего
+			if (year > currentYear || year < currentYear - 100) {
+				e.target.parentNode.parentNode.classList.add('error');
+				e.target.parentNode.parentNode.lastElementChild.textContent =
+					'Некорректный год.';
+				return;
 			}
+
+			// Проверяем, что месяц в диапазоне от 1 до 12
+			if (month < 0 || month > 11) {
+				e.target.parentNode.parentNode.classList.add('error');
+				e.target.parentNode.parentNode.lastElementChild.textContent =
+					'Некорректный месяц.';
+				return;
+			}
+
+			// Создаем дату рождения и проверяем корректность дня в контексте месяца
+			const bDate = new Date(year, month, day);
+			if (
+				bDate.getDate() !== day ||
+				bDate.getMonth() !== month ||
+				bDate.getFullYear() !== year
+			) {
+				e.target.parentNode.parentNode.classList.add('error');
+				e.target.parentNode.parentNode.lastElementChild.textContent =
+					'Некорректный день.';
+				return;
+			}
+
+			// Проверка возраста на младше 18 лет
+			const age = currentYear - bDate.getFullYear();
+			const isUnderage =
+				age < 18 || (age === 18 && today < new Date(currentYear, month, day));
+
+			if (isUnderage) {
+				e.target.parentNode.parentNode.classList.add('error');
+				e.target.parentNode.parentNode.lastElementChild.textContent =
+					'Страхователь должен быть старше 18 лет';
+			} else {
+				e.target.parentNode.parentNode.classList.remove('error');
+			}
+		} else {
+			e.target.parentNode.parentNode.classList.remove('error');
 		}
 	});
 
 	// SecondStepContinue
 	secondStepContinue.addEventListener('click', e => {
-		const date = birthdate.value.split('.');
-		const isAdult = checkAge(`${date[2]}-${date[1]}-${date[0]}`);
-
 		if (
 			passportSeries.value.length > 1 &&
 			passportNumber.value.length > 6 &&
-			birthdate.value &&
-			isAdult
+			birthdate.value.length == 10
 		) {
 			orderHeadItems[1].classList.remove('order__head-item--active');
 			orderHeadItems[2].classList.add('order__head-item--active');

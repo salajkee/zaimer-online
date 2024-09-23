@@ -44,6 +44,29 @@
 		border: 1px solid #dfe2e1;
 		border-radius: 10px;
 
+		&__list {
+			display: flex;
+			flex-direction: column;
+			row-gap: 10px;
+
+			&-row {
+				display: flex;
+				row-gap: 10px;
+
+				&-label {
+					flex: 0 1 200px;
+					font-size: 16px;
+					color: #323232;
+				}
+
+				&-value {
+					font-size: 16px;
+					font-weight: 500;
+					color: #323232;
+				}
+			}
+		}
+
 		&__form {
 			display: grid;
 			gap: 20px;
@@ -120,6 +143,67 @@
 							font-size: 16px;
 							font-weight: 500;
 							color: $text;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.cabinetpage .cabinet {
+		&__wrapper {
+			grid-template-columns: 250px auto;
+			gap: 15px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.cabinetpage .cabinet {
+		&__wrapper {
+			display: block;
+		}
+
+		&__nav-list {
+			flex-direction: row;
+		}
+
+		.requests {
+			&__list {
+				grid-template-columns: 1fr;
+				gap: 10px;
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.cabinetpage .cabinet {
+		&__wrapper {
+			display: block;
+		}
+
+		&__nav-item a {
+			padding: 10px 20px;
+		}
+
+		.settings {
+			padding: 20px;
+		}
+
+		.requests {
+			&__list {
+				.item {
+					padding: 20px;
+
+					&__list-row {
+						flex-direction: column;
+						row-gap: 5px;
+
+						&-label {
+							flex: auto;
 						}
 					}
 				}
