@@ -1,0 +1,227 @@
+.credit-online .info {
+	padding: 50px 0 100px;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		column-gap: 54px;
+	}
+
+	&__img {
+		flex: 1 0 606px;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__content {
+		flex: 1 1 calc(100% - 660px);
+
+		a {
+			color: $primary;
+			text-decoration: underline;
+		}
+
+		p {
+			margin-top: 15px;
+			font-size: 16px;
+			line-height: 1.5;
+			color: $text;
+
+			&:first-child {
+				margin: 0;
+			}
+		}
+
+		h2 {
+			margin-top: 15px;
+			font-weight: 700;
+			font-size: 28px;
+			color: $title;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+
+		h3 {
+			margin-top: 15px;
+			font-size: 20px;
+			font-weight: 700;
+			color: $title;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+
+		ul {
+			margin-top: 15px;
+			padding-left: 20px;
+
+			&:first-child {
+				margin: 0;
+			}
+
+			li {
+				font-size: 16px;
+				line-height: 1.5;
+				color: $text;
+				list-style: disc;
+				list-style-type: disc;
+			}
+		}
+
+		ol {
+			margin-top: 15px;
+			padding-left: 20px;
+
+			&:first-child {
+				margin: 0;
+			}
+
+			li {
+				font-size: 16px;
+				line-height: 1.5;
+				color: $text;
+				list-style: decimal;
+				list-style-type: decimal;
+			}
+		}
+	}
+
+	&__bot {
+		margin-top: 50px;
+
+		a {
+			color: $primary;
+			text-decoration: underline;
+		}
+
+		p {
+			margin-top: 15px;
+			font-size: 16px;
+			line-height: 1.5;
+			color: $text;
+
+			&:first-child {
+				margin: 0;
+			}
+		}
+
+		h2 {
+			margin-top: 15px;
+			font-weight: 700;
+			font-size: 28px;
+			color: $title;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+
+		h3 {
+			margin-top: 15px;
+			font-size: 20px;
+			font-weight: 700;
+			color: $title;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+
+		ul {
+			margin-top: 15px;
+			padding-left: 20px;
+
+			&:first-child {
+				margin: 0;
+			}
+
+			li {
+				font-size: 16px;
+				line-height: 1.5;
+				color: $text;
+				list-style: disc;
+				list-style-type: disc;
+			}
+		}
+
+		ol {
+			margin-top: 15px;
+			padding-left: 20px;
+
+			&:first-child {
+				margin: 0;
+			}
+
+			li {
+				font-size: 16px;
+				line-height: 1.5;
+				color: $text;
+				list-style: decimal;
+				list-style-type: decimal;
+			}
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.credit-online .info {
+		&__wrapper {
+			column-gap: 30px;
+		}
+
+		&__img {
+			flex: 1 0 500px;
+		}
+
+		&__content {
+			flex: 1 1 calc(100% - 530px);
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.credit-online .info {
+		&__wrapper {
+			flex-direction: column;
+			row-gap: 30px;
+		}
+
+		&__img {
+			flex: 1 1 auto;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.credit-online .info {
+		&__wrapper {
+			row-gap: 20px;
+		}
+
+		&__content {
+			h2 {
+				font-size: 22px;
+			}
+
+			h3 {
+				font-size: 16px;
+			}
+		}
+
+		&__bot {
+			h2 {
+				font-size: 22px;
+			}
+
+			h3 {
+				font-size: 16px;
+			}
+		}
+	}
+}

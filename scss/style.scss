@@ -1,0 +1,238 @@
+@import './vars';
+@import './fonts';
+@import './reset';
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Gilroy', sans-serif;
+	font-weight: 400;
+	scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #dddddd;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: $primary;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex: 1 1 auto;
+
+	&.otherpage {
+		padding-top: 75.8px;
+	}
+}
+
+@media (max-width: 992px) {
+	.main {
+		&.otherpage {
+			padding-top: 65.8px;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.main {
+		&.otherpage {
+			padding-top: 58px;
+		}
+	}
+}
+
+.air-datepicker {
+	width: 300px;
+	box-shadow: none;
+	border-radius: 5px;
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1350px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.title {
+	font-weight: 700;
+	font-size: 28px;
+	color: $title;
+	text-align: center;
+
+	@media (max-width: 576px) {
+		font-size: 22px;
+	}
+}
+
+.subtitle {
+	margin-top: 10px;
+	font-size: 18px;
+	font-weight: 500;
+	color: $title;
+	line-height: 1.5;
+	text-align: center;
+
+	@media (max-width: 576px) {
+		font-size: 16px;
+	}
+}
+
+.btn {
+	width: 300px;
+	height: 54px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	font-weight: 700;
+	color: #ffffff;
+	text-align: center;
+	border-radius: 5px;
+	background-color: $primary;
+	transition: all 0.2s ease-in-out;
+
+	@media (hover: hover) {
+		&:hover {
+			color: $white;
+			background-color: #009d5b;
+		}
+	}
+
+	@media (hover: none) {
+		&:active {
+			color: $primary;
+			background-color: $white;
+		}
+	}
+}
+
+.breadcrumbs {
+	margin: 25px 0;
+
+	.container {
+		padding: 0 15px !important;
+	}
+
+	span {
+		a {
+			font-size: 16px;
+			color: $text;
+		}
+		strong {
+			font-size: 16px;
+			font-weight: 600;
+			color: $text;
+		}
+	}
+}
+
+input::placeholder {
+	color: #aaa;
+}
+
+.select {
+	width: 100%;
+	position: relative;
+
+	select {
+		padding: 0 20px;
+		width: 100%;
+		height: 60px;
+
+		border: 1px solid #606060;
+
+		&.error {
+			border: 1px solid red;
+		}
+	}
+
+	svg {
+		position: absolute;
+		bottom: 19px;
+		right: 20px;
+		width: 22px;
+		height: 22px;
+		transform: rotate(180deg);
+		pointer-events: none;
+	}
+}
+
+.not-found {
+	padding-top: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@media (max-width: 1350px) {
+		padding-top: 100px;
+	}
+
+	@media (max-width: 768px) {
+		padding: 50px 0;
+	}
+
+	&__title {
+		font-size: 40px;
+		font-weight: 700;
+		color: $primary;
+		text-align: center;
+
+		@media (max-width: 768px) {
+			font-size: 30px;
+		}
+	}
+
+	&__link {
+		width: 250px;
+		margin: 30px auto 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 60px;
+		font-size: 16px;
+		font-weight: 700;
+		color: $white;
+		background-color: $primary;
+		transition: all 0.2s linear;
+		border: 2px solid $primary;
+
+		&:hover {
+			color: $primary;
+			background-color: $white;
+		}
+	}
+}
+
+@import './blocks/header';
+@import './blocks/footer';
+@import './blocks/creditonline-intro';
+@import './blocks/creditonline-req-loan';
+@import './blocks/creditonline-info';
+@import './blocks/creditonline-advantages';
+@import './blocks/creditonline-requirements';
+@import './blocks/creditonline-faq';
+@import './blocks/cabinetpage-cabinet';
+@import './blocks/popup';
+@import './blocks/policy';
+@import './blocks/order';
+@import './blocks/login';

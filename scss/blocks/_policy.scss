@@ -1,0 +1,88 @@
+.policypage .policy {
+	padding-bottom: 50px;
+
+	.container {
+		max-width: 900px;
+	}
+
+	&__title {
+		margin: 0 auto;
+		max-width: 600px;
+		font-weight: 700;
+		font-size: 24px;
+		color: $title;
+		text-align: center;
+	}
+
+	&__text {
+		margin-top: 20px;
+
+		a {
+			color: $primary;
+			text-decoration: underline;
+		}
+
+		p {
+			margin-top: 15px;
+			font-size: 16px;
+			line-height: 1.5;
+			color: $text;
+
+			&:first-child {
+				margin: 0;
+			}
+		}
+
+		ul {
+			margin-top: 15px;
+			padding-left: 20px;
+
+			&:first-child {
+				margin: 0;
+			}
+
+			li {
+				margin-top: 15px;
+				font-size: 16px;
+				line-height: 1.5;
+				color: $text;
+				list-style: disc;
+				list-style-type: disc;
+
+				&:nth-child(1) {
+					margin-top: 0;
+				}
+			}
+		}
+
+		ol {
+			margin-top: 15px;
+			padding-left: 20px;
+
+			&:first-child {
+				margin: 0;
+			}
+
+			li {
+				margin-top: 15px;
+				font-size: 16px;
+				line-height: 1.5;
+				color: $text;
+				list-style: decimal;
+				list-style-type: decimal;
+
+				&:nth-child(1) {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.policypage .policy {
+		&__title {
+			font-size: 20px;
+		}
+	}
+}

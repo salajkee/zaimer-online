@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/air-datepicker.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="container">
+					<div class="header__wrapper">
+						<a href="/" class="header__logo">
+							<img src="./images/header/logo-upd.svg" alt="logo" />
+						</a>
+
+						<div class="header__lang lang">
+							<div class="lang-top">
+								<img src="./images/polylang/uz_UZ.svg" alt="" />
+							</div>
+							<div class="lang__popup hide">
+								<ul class="lang__popup-menu">
+									<li>
+										<img src="./images/polylang/uz_UZ.svg" alt="" />
+									</li>
+									<li>
+										<img src="./images/polylang/ru_RU.svg" alt="" />
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<a class="header__cabinet" href="#">
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M12 3C9.79086 3 8 4.79086 8 7V8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8V7C16 4.79086 14.2091 3 12 3ZM9.5 7C9.5 5.61929 10.6193 4.5 12 4.5C13.3807 4.5 14.5 5.61929 14.5 7V8C14.5 9.38071 13.3807 10.5 12 10.5C10.6193 10.5 9.5 9.38071 9.5 8V7ZM5.50232 19.3686C5.97321 16.2577 9.01803 14.5 12.0022 14.5C14.9858 14.5 18.031 16.2577 18.5019 19.3686C18.5046 19.3866 18.5025 19.3972 18.5 19.4048C18.497 19.4137 18.4903 19.4269 18.4759 19.442C18.4453 19.4741 18.3894 19.5039 18.3171 19.5039H5.68718C5.61487 19.5039 5.55898 19.4741 5.52838 19.442C5.51394 19.4269 5.50726 19.4137 5.50427 19.4048C5.50174 19.3972 5.49961 19.3865 5.50232 19.3686ZM12.0022 13C8.57321 13 4.64037 15.0404 4.01922 19.1441C3.85624 20.2208 4.75727 21.0039 5.68718 21.0039H18.3171C19.247 21.0039 20.148 20.2208 19.985 19.1441C19.3638 15.0404 15.4306 13 12.0022 13Z"
+								/>
+							</svg>
+
+							<span>Войти</span>
+						</a>
+					</div>
+				</div>
+			</header>
+
+			<main class="main credit-online">
+				<section class="intro">
+					<div class="container">
+						<div class="intro__wrapper">
+							<div class="intro__text">
+								<h1 class="intro__title">
+									Кредит онлайн без залога <br />
+									до 15 000 000 сумов
+								</h1>
+								<p class="intro__subtitle subtitle">
+									Кредит на карту без поручителей и залога. <br />
+									Получите решение за 5 минут, деньги наличными или на карту.
+								</p>
+								<a class="intro__btn btn" href="#">Подать заявку</a>
+							</div>
+							<div class="intro__img">
+								<img src="./images/scoredloan-intro.png" alt="img" />
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="req-loan">
+					<div class="container">
+						<div class="req-loan__wrapper">
+							<h2 class="req-loan__title title">Онлайн-заявка на кредит</h2>
+
+							<div class="req-loan__sum">
+								<div class="req-loan__sum-top top">
+									<p class="top__title">Сумма кредита (сум)</p>
+									<div class="top__input">
+										<input type="text" />
+									</div>
+								</div>
+								<div class="req-loan__sum-range range">
+									<div class="range__input">
+										<input
+											type="range"
+											min="0"
+											max="14000000"
+											step="500000"
+											value="0"
+										/>
+									</div>
+									<div class="range__stages">
+										<div class="range__stages-item">
+											<span>1 000 000</span>
+										</div>
+										<div class="range__stages-item">
+											<span>5 000 000</span>
+										</div>
+										<div class="range__stages-item">
+											<span>10 000 000</span>
+										</div>
+										<div class="range__stages-item">
+											<span>15 000 000</span>
+										</div>
+									</div>
+								</div>
+								<a class="req-loan__sum-btn btn" href="#">Получить</a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="advantages">
+					<div class="container">
+						<h2 class="advantages__title title">
+							Преимущества кредита онлайн в Ташкенте или другом регионе
+							Узбекистана
+						</h2>
+						<p class="advantages__subtitle subtitle">
+							У онлайн кредитов большой список плюсов:
+						</p>
+						<div class="advantages__items">
+							<div class="advantages__item">
+								<div class="advantages__item-icon">
+									<img
+										src="images/credit-online/advantages/adv-icon1.svg"
+										alt="icon"
+									/>
+								</div>
+								<p class="advantages__item-title">Можно оформить по паспорту</p>
+							</div>
+							<div class="advantages__item">
+								<div class="advantages__item-icon">
+									<img
+										src="images/credit-online/advantages/adv-icon2.svg"
+										alt="icon"
+									/>
+								</div>
+								<p class="advantages__item-title">
+									При небольших суммах не нужны залог и поручители
+								</p>
+							</div>
+							<div class="advantages__item">
+								<div class="advantages__item-icon">
+									<img
+										src="images/credit-online/advantages/adv-icon3.svg"
+										alt="icon"
+									/>
+								</div>
+								<p class="advantages__item-title">
+									Могут одобрить с плохой кредитной историей, но небольшую сумму
+								</p>
+							</div>
+							<div class="advantages__item">
+								<div class="advantages__item-icon">
+									<img
+										src="images/credit-online/advantages/adv-icon4.svg"
+										alt="icon"
+									/>
+								</div>
+								<p class="advantages__item-title">
+									Клиент получит деньги в течение 1 часа с момента обращения
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="requirements">
+					<div class="container">
+						<h1 class="requirements__title title">
+							Требования к заемщикам для получения онлайн кредита на карту без
+							отказа в Ташкенте
+						</h1>
+						<div class="requirements__items">
+							<div class="requirements__item">
+								<span class="requirements__item-num">01</span>
+								<p class="requirements__item-text">
+									Клиент должен иметь хорошую кредитную историю или иметь залог
+								</p>
+							</div>
+							<div class="requirements__item">
+								<span class="requirements__item-num">02</span>
+								<p class="requirements__item-text">
+									Возраст заемщика должен быть от 18 до 65 лет
+								</p>
+							</div>
+							<div class="requirements__item">
+								<span class="requirements__item-num">03</span>
+								<p class="requirements__item-text">
+									Большой шанс одобрения будет у тех, кто имеет постоянное место
+									работы
+								</p>
+							</div>
+							<div class="requirements__item">
+								<span class="requirements__item-num">04</span>
+								<p class="requirements__item-text">
+									У клиента должен быть личный мобильный телефон с доступом в
+									интернет
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="info">
+					<div class="container">
+						<div class="info__wrapper">
+							<div class="info__img">
+								<img src="./images/credit-online/info/info_img.jpg" alt="img" />
+							</div>
+							<div class="info__content">
+								<h2>Кредит онлайн получить на карту без отказа</h2>
+								<p>
+									Кредит онлайн в Ташкенте — это быстрый способ получить деньги
+									в долг в банке или микрокредитной организации. От вас
+									потребуется добросовестно заполнить информацию на нашем сайте
+									<br /><br />
+									Кредит на карту в Ташкенте можно получить без кредитной
+									истории с 18 лет без отказа
+									<br /><br />
+									Получить деньги в долг в Ташкенте или другом регионе
+									Узбекистана можно круглосуточно без каких-либо проблем. Для
+									этого зайдите на наш сайт, воспользуйтесь услугой «Мастера
+									займов»
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="faq">
+					<div class="container">
+						<h1 class="faq__title title">Вопрос-Ответ</h1>
+						<div class="faq__items">
+							<div class="faq__item">
+								<div class="faq__item-head">
+									<h3 class="faq__item-title">
+										Как оформить кредит под залог авто?
+									</h3>
+									<svg class="faq__item-icon">
+										<use xlink:href="./sprite.svg#plus-icon"></use>
+									</svg>
+								</div>
+								<div class="faq__item-content">
+									<p>
+										Вы можете подать заявку онлайн на официальном сайте,
+										заполнив короткую заявку с информацией о желаемой сумме,
+										сроке и вашем автомобиле. После предварительного одобрения
+										специалисты проверят состояние машины и документы. При
+										положительном решении вы заключаете договор и получаете
+										деньги наличными или на карту.
+									</p>
+								</div>
+							</div>
+							<div class="faq__item">
+								<div class="faq__item-head">
+									<h3 class="faq__item-title">
+										Кто может получить микрозайм под залог автомобиля?
+									</h3>
+									<svg class="faq__item-icon">
+										<use xlink:href="./sprite.svg#plus-icon"></use>
+									</svg>
+								</div>
+								<div class="faq__item-content">
+									<p>Займ доступен для лиц:</p>
+									<ul>
+										<li>От 21 до 55 лет (женщины) или 60 лет (мужчины)</li>
+										<li>
+											При отсутствии текущей просрочки по действующим кредитам
+										</li>
+										<li>
+											Имеющих в собственности автомобиль без залогов и арестов
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="faq__item">
+								<div class="faq__item-head">
+									<h3 class="faq__item-title">
+										Какие документы нужны для оформления?
+									</h3>
+									<svg class="faq__item-icon">
+										<use xlink:href="./sprite.svg#plus-icon"></use>
+									</svg>
+								</div>
+								<div class="faq__item-content">
+									<p>Необходимо подготовить:</p>
+									<ul>
+										<li>Паспорт</li>
+										<li>Техпаспорт на автомобиль</li>
+										<li>Свидетельство о браке (если машина куплена в браке)</li>
+									</ul>
+								</div>
+							</div>
+							<div class="faq__item">
+								<div class="faq__item-head">
+									<h3 class="faq__item-title">
+										Каковы условия кредита под залог авто?
+									</h3>
+									<svg class="faq__item-icon">
+										<use xlink:href="./sprite.svg#plus-icon"></use>
+									</svg>
+								</div>
+								<div class="faq__item-content">
+									<ul>
+										<li>Сумма займа: от 5 до 250 миллионов сум</li>
+										<li>Срок: от 3 до 36 месяцев</li>
+										<li>Ежемесячная ставка: от 3% в месяц</li>
+										<li>Размер займа: до 80% от оценки автомобиля</li>
+									</ul>
+								</div>
+							</div>
+							<div class="faq__item">
+								<div class="faq__item-head">
+									<h3 class="faq__item-title">Чем МФО лучше автоломбарда?</h3>
+									<svg class="faq__item-icon">
+										<use xlink:href="./sprite.svg#plus-icon"></use>
+									</svg>
+								</div>
+								<div class="faq__item-content">
+									<p>
+										В отличие от автоломбардов, МФО позволяет вам пользоваться
+										автомобилем во время действия кредита.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__items">
+						<div class="footer__item">
+							<a href="/" class="footer__logo">
+								<img src="./images/header/logo-upd.svg" alt="logo" />
+							</a>
+							<div class="footer__copyright">
+								© <span></span> Все права защищены
+							</div>
+						</div>
+						<div class="footer__item">
+							<nav class="footer__nav">
+								<ul class="footer__nav-list">
+									<li>
+										<a class="footer__nav-link" href="./about.html">О нас</a>
+									</li>
+									<li>
+										<a class="footer__nav-link" href="./helpful.html">
+											Полезное
+										</a>
+									</li>
+									<li>
+										<a class="footer__nav-link" href="./faq.html">
+											Вопрос-Ответ
+										</a>
+									</li>
+									<li>
+										<a class="footer__nav-link" href="#">Калькуляторы</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="footer__item">
+							<div class="footer__tel">
+								Телефон: <br />
+								<a href="tel:+712002004">+71-200-20-04</a>
+							</div>
+							<div class="footer__address">
+								<span>Адрес:</span> г. Ташкент, ул. Садыка Азимова, 68
+							</div>
+						</div>
+						<div class="footer__item">
+							<a class="footer__policy" href="#">
+								Политика обработки персональных данных
+							</a>
+						</div>
+						<div class="footer__item">
+							<div class="footer__age">18+</div>
+						</div>
+					</div>
+					<p class="footer__text">
+						Zaimer.uz не является микрокредитной или кредитной организацией, не
+						выдает займы и не привлекает денежных средств. Информация,
+						размещенная на сайте, носит исключительно ознакомительный характер.
+						Все условия и решения, касающиеся получения займов или кредитов,
+						принимаются непосредственно компаниями, предоставляющими данные
+						услуги
+					</p>
+				</div>
+			</footer>
+		</div>
+
+		<script src="./js/air-datepicker.js"></script>
+		<script src="./js/imask.js"></script>
+		<script src="./js/req-loan.js"></script>
+		<script src="./js/faq.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,179 @@
+.credit-online .req-loan {
+	padding: 60px 0;
+	background-color: transparent;
+
+	&__wrapper {
+		max-width: 700px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	&__step {
+		margin-top: 90px;
+		padding: 30px 0;
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	&__sum {
+		margin-top: 30px;
+
+		.top {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			&__title {
+				font-size: 16px;
+				font-weight: 500;
+				color: $text;
+			}
+
+			&__input {
+				width: 180px;
+				height: 40px;
+				padding: 0 15px;
+				position: relative;
+				border: 1px solid $text;
+				border-radius: 4px;
+				user-select: none;
+
+				&.error {
+					border: 1px solid red;
+				}
+
+				input {
+					width: 100%;
+					height: 100%;
+					font-size: 16px;
+					color: $text;
+				}
+			}
+		}
+
+		.range {
+			margin-top: 20px;
+
+			&__input {
+				position: relative;
+
+				input {
+					-webkit-appearance: none;
+					appearance: none;
+					width: 100%;
+					cursor: pointer;
+					outline: none;
+					border-radius: 2px;
+					height: 6px;
+					background: #dfe2e1;
+					position: relative;
+					z-index: 2;
+
+					&::-webkit-slider-thumb {
+						-webkit-appearance: none;
+						appearance: none;
+						height: 24px;
+						width: 24px;
+						background-color: #fff;
+						border-radius: 50%;
+						border: 6px solid $primary;
+						transition: 0.2s ease-in-out;
+						position: relative;
+					}
+
+					&::-moz-range-thumb {
+						height: 24px;
+						width: 24px;
+						background-color: $primary;
+						border-radius: 50%;
+						border: none;
+						transition: 0.2s ease-in-out;
+					}
+				}
+			}
+
+			&__stages {
+				height: 18px;
+				margin-top: 14px;
+				display: flex;
+				justify-content: space-between;
+				position: relative;
+
+				&-item {
+					text-align: center;
+					font-size: 14px;
+					color: #8fa39a;
+					position: absolute;
+
+					&::before {
+						content: '';
+						width: 1px;
+						height: 12px;
+						background: #dfe2e1;
+						position: absolute;
+						top: -18px;
+						left: 50%;
+						transform: translateX(-50%);
+					}
+
+					&:nth-child(1) {
+						&::before {
+							left: 0;
+							transform: translateX(0);
+						}
+					}
+
+					&:nth-child(2) {
+						left: 24.6%;
+					}
+
+					&:nth-child(3) {
+						left: 58.5%;
+					}
+
+					&:nth-child(4) {
+						right: 0;
+
+						&::before {
+							left: auto;
+							right: 0;
+							transform: translateX(0);
+						}
+					}
+				}
+			}
+		}
+
+		&-btn {
+			height: 50px;
+			margin: 30px auto 0;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.credit-online .req-loan {
+		&__sum {
+			.range__stages-item {
+				&:nth-child(2),
+				&:nth-child(3) {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.credit-online .req-loan {
+		&__sum {
+			.top {
+				flex-direction: column;
+				row-gap: 10px;
+			}
+		}
+	}
+}

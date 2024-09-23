@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/air-datepicker.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="container">
+					<div class="header__wrapper">
+						<a href="/" class="header__logo">
+							<img src="./images/header/logo-upd.svg" alt="logo" />
+						</a>
+
+						<div class="header__lang lang">
+							<div class="lang-top">
+								<img src="./images/polylang/uz_UZ.svg" alt="" />
+							</div>
+							<div class="lang__popup hide">
+								<ul class="lang__popup-menu">
+									<li>
+										<img src="./images/polylang/uz_UZ.svg" alt="" />
+									</li>
+									<li>
+										<img src="./images/polylang/ru_RU.svg" alt="" />
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<a class="header__cabinet" href="#">
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M12 3C9.79086 3 8 4.79086 8 7V8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8V7C16 4.79086 14.2091 3 12 3ZM9.5 7C9.5 5.61929 10.6193 4.5 12 4.5C13.3807 4.5 14.5 5.61929 14.5 7V8C14.5 9.38071 13.3807 10.5 12 10.5C10.6193 10.5 9.5 9.38071 9.5 8V7ZM5.50232 19.3686C5.97321 16.2577 9.01803 14.5 12.0022 14.5C14.9858 14.5 18.031 16.2577 18.5019 19.3686C18.5046 19.3866 18.5025 19.3972 18.5 19.4048C18.497 19.4137 18.4903 19.4269 18.4759 19.442C18.4453 19.4741 18.3894 19.5039 18.3171 19.5039H5.68718C5.61487 19.5039 5.55898 19.4741 5.52838 19.442C5.51394 19.4269 5.50726 19.4137 5.50427 19.4048C5.50174 19.3972 5.49961 19.3865 5.50232 19.3686ZM12.0022 13C8.57321 13 4.64037 15.0404 4.01922 19.1441C3.85624 20.2208 4.75727 21.0039 5.68718 21.0039H18.3171C19.247 21.0039 20.148 20.2208 19.985 19.1441C19.3638 15.0404 15.4306 13 12.0022 13Z"
+								/>
+							</svg>
+
+							<span>Войти</span>
+						</a>
+					</div>
+				</div>
+			</header>
+
+			<main class="main otherpage">
+				<section class="order">
+					<div class="container">
+						<div class="order__wrapper">
+							<div class="order__head">
+								<div class="order__head-item order__head-item--active">
+									<div class="order__head-item-icon">
+										<img src="./images/fiat-money.svg" alt="" />
+									</div>
+								</div>
+								<div class="order__head-item">
+									<div class="order__head-item-icon">
+										<img src="./images/profile.svg" alt="" />
+									</div>
+								</div>
+								<div class="order__head-item">
+									<div class="order__head-item-icon">
+										<img src="./images/face-detection.svg" alt="" />
+									</div>
+								</div>
+							</div>
+
+							<div
+								class="order__step order__step-1 first-step order__step--active"
+							>
+								<div class="order__step-head first-step__head">
+									<div class="order__step-head-title first-step__head-title">
+										Шаг 1 из 3
+									</div>
+									<div class="order__step-head-text first-step__head-text">
+										Выберите сумму и срок кредита
+									</div>
+								</div>
+
+								<div class="first-step__sum sum">
+									<div class="sum__top">
+										<div class="sum__top-title">Сумма кредита (сум)</div>
+										<div class="sum__top-input">
+											<input type="text" />
+										</div>
+									</div>
+									<div class="sum__range">
+										<div class="sum__range-input">
+											<input
+												type="range"
+												min="0"
+												max="14000000"
+												step="500000"
+												value="0"
+											/>
+										</div>
+										<div class="sum__range-stages">
+											<div class="sum__range-stages-item">
+												<span>1 000 000</span>
+											</div>
+											<div class="sum__range-stages-item">
+												<span>5 000 000</span>
+											</div>
+											<div class="sum__range-stages-item">
+												<span>10 000 000</span>
+											</div>
+											<div class="sum__range-stages-item">
+												<span>15 000 000</span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="first-step__term term">
+									<div class="term__top">
+										<div class="term__top-title">Срок кредита (мес.)</div>
+										<div class="term__top-input">
+											<input type="text" />
+										</div>
+									</div>
+									<div class="term__range">
+										<div class="term__range-input">
+											<input type="range" min="0" max="9" value="0" step="3" />
+										</div>
+										<div class="term__range-stages">
+											<div class="term__range-stages-item">
+												<span>3</span>
+											</div>
+											<div class="term__range-stages-item">
+												<span>6</span>
+											</div>
+											<div class="term__range-stages-item">
+												<span>9</span>
+											</div>
+											<div class="term__range-stages-item">
+												<span>12</span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<button class="order__step-btn btn">Продолжить</button>
+							</div>
+
+							<div class="order__step order__step-2 second-step">
+								<div class="order__step-head second-step__head">
+									<div class="order__step-head-title second-step__head-title">
+										Шаг 2 из 3
+									</div>
+									<div class="order__step-head-text second-step__head-text">
+										Укажите свои контактные данные
+									</div>
+								</div>
+
+								<div class="second-step__form form">
+									<div class="form__wrapper">
+										<div class="form__inner">
+											<div class="form__item">
+												<label class="form__item-label" for="passport-series">
+													<span class="form__item-head">Серия *</span>
+													<input
+														class="form__item-input"
+														name="passport-series"
+														id="passport-series"
+														type="text"
+														maxlength="2"
+														placeholder="Серия"
+													/>
+												</label>
+											</div>
+											<div class="form__item">
+												<label class="form__item-label" for="passport-number">
+													<span class="form__item-head">Номер документа *</span>
+													<input
+														class="form__item-input"
+														name="passport-number"
+														id="passport-number"
+														type="text"
+														maxlength="7"
+														placeholder="Номер документа"
+													/>
+												</label>
+											</div>
+											<div class="form__item-error form__item-error-msg">
+												Поле обязательно к заполнению
+											</div>
+											<div class="form__item-error form__item-error-series">
+												Серия паспорта должна содержать две латинские буквы
+											</div>
+											<div class="form__item-error form__item-error-number">
+												Количество символов должно быть 7
+											</div>
+										</div>
+										<div class="form__item">
+											<label class="form__item-label" for="birthdate">
+												<span class="form__item-head">Дата рождения *</span>
+												<input
+													class="item__date form__item-input"
+													type="text"
+													id="birthdate"
+													placeholder="__.__.____"
+													autocomplete="off"
+												/>
+											</label>
+											<div class="form__item-error">
+												Введите вашу дату рождения
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<button class="order__step-btn btn">Продолжить</button>
+							</div>
+
+							<div class="order__step order__step-3 third-step">
+								<div class="order__step-head third-step__head">
+									<div class="order__step-head-title third-step__head-title">
+										Шаг 3 из 3
+									</div>
+									<div class="order__step-head-text third-step__head-text">
+										Подтвердите свою личность
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+		<script src="./js/imask.js"></script>
+		<script src="./js/air-datepicker.js"></script>
+		<script src="./js/order.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>

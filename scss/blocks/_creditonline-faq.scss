@@ -1,0 +1,136 @@
+.credit-online .faq {
+	padding: 60px 0;
+
+	&__items {
+		max-width: 900px;
+		margin: 15px auto 0;
+	}
+
+	&__item {
+		border-bottom: 1px solid $primary;
+
+		&.active .faq__item {
+			&-title {
+				color: $primary !important;
+			}
+
+			&-icon {
+				transform: rotate(45deg);
+				fill: $primary;
+			}
+
+			&-content {
+				margin-bottom: 15px;
+			}
+		}
+
+		&-head {
+			padding: 15px 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			column-gap: 10px;
+
+			@media (hover: hover) {
+				cursor: pointer;
+			}
+		}
+
+		&-title {
+			font-size: 20px;
+			font-weight: 700;
+			color: $title;
+		}
+
+		&-icon {
+			width: 20px;
+			height: 20px;
+			min-width: 20px;
+			min-height: 20px;
+			cursor: pointer;
+			transition: all 0.2s linear;
+			fill: $title;
+		}
+
+		&-content {
+			height: 0;
+			overflow: hidden;
+			transition: all 0.2s linear;
+
+			p {
+				margin-top: 10px;
+				font-size: 16px;
+				line-height: 1.5;
+				color: $text;
+
+				&:first-child {
+					margin: 0;
+				}
+			}
+
+			ul {
+				margin-top: 10px;
+				margin-left: 15px;
+				padding-left: 20px;
+
+				li {
+					line-height: 1.5;
+					list-style: disc;
+					list-style-type: disc;
+				}
+			}
+
+			ol {
+				margin-top: 10px;
+				margin-left: 15px;
+				padding-left: 20px;
+
+				li {
+					line-height: 1.5;
+					list-style: decimal;
+					list-style-type: decimal;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.credit-online .faq {
+		padding: 50px 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.credit-online .faq {
+		&__item {
+			&-title {
+				font-size: 18px;
+			}
+
+			&-icon {
+				width: 18px;
+				height: 18px;
+				min-width: 18px;
+				min-height: 18px;
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.credit-online .faq {
+		&__item {
+			&-title {
+				font-size: 16px;
+			}
+
+			&-icon {
+				width: 18px;
+				height: 18px;
+				min-width: 18px;
+				min-height: 18px;
+			}
+		}
+	}
+}

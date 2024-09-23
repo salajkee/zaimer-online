@@ -1,0 +1,133 @@
+.credit-online .intro {
+	padding-top: 75.8px;
+	height: calc(100% - 75.8px);
+	overflow: hidden;
+	position: relative;
+	background-color: $white;
+
+	&__wrapper {
+		padding: 50px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__title {
+		font-size: 32px;
+		font-weight: 700;
+		color: $title;
+	}
+
+	&__subtitle {
+		margin-top: 30px;
+		text-align: left;
+	}
+
+	&__list {
+		margin-top: 30px;
+		padding-left: 10px;
+
+		li {
+			padding: 5px 0 0 20px;
+			font-size: 20px;
+			color: $text;
+			line-height: 1.5;
+			position: relative;
+
+			&::before {
+				content: '';
+				width: 7px;
+				height: 7px;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				border-radius: 50%;
+				background-color: $text;
+			}
+		}
+	}
+
+	&__btn {
+		margin-top: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__img {
+		flex: 0 1 560px;
+		border-radius: 10px;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+@media (max-width: 1170px) {
+	.credit-online .intro {
+		&__wrapper {
+			column-gap: 20px;
+		}
+
+		&__title {
+			font-size: 28px;
+		}
+
+		&__list li {
+			font-size: 18px;
+		}
+
+		&__img {
+			flex: 0 1 500px;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.credit-online .intro {
+		padding-top: 65.8px;
+		height: calc(100% - 65.8px);
+
+		&__wrapper {
+			row-gap: 30px;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&__img {
+			flex: 0 1 500px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.credit-online .intro {
+		&__wrapper {
+			padding: 35px 0 50px;
+		}
+
+		&__img {
+			flex: 1 1 auto;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.credit-online .intro {
+		padding-top: 58px;
+		height: calc(100% - 58px);
+
+		&__title {
+			font-size: 26px;
+		}
+
+		&__list {
+			margin-top: 15px;
+		}
+	}
+}
